@@ -12,3 +12,4 @@ The book information is handled in main function, therefore, the program will cr
 
 Since it is just a simple code, the limitation on this one is the lack of exception handling, if the user inputs a string for the quantity, the program will show an error. To improved my design, perhaps adding another oop concepts such as Order class to separate order logic from the user interavction.
 
+
