@@ -1,6 +1,7 @@
 1. Explain the overall design of your program and justify why you chose this particular class structure and set of user-defined methods.
 
-This design was my project in SQL which was book inventory system that i converted into python, the program is designed with OOP, including encapsulation as it cannot be accessed directly by the user, abstraction as the user knows every item can call product but not the internal details, inheritance where the BookQ and BookT inherit from Item and lastly, polymorphism because the process would run regardless if the item is BookQ or BookT,
+This design was my project in SQL which was book inventory system that i converted into python, the program is designed with OOP, including encapsulation as it cannot be accessed directly by the user, abstraction as the user knows every item can call product but not the internal details, inheritance where the BookQ and BookT inherit from Item and lastly, polymorphism because the process would run regardless if the item is BookQ or BookT. I also included three user defined methods such as item_info, product and process to separate responsibilities
+
 
 2. Describe how user input is handled in your program and discuss the role of exception handling (try–except) in preventing incorrect or unexpected behavior.
 
@@ -9,4 +10,5 @@ The book information is handled in main function, therefore, the program will cr
 3. Identify one limitation of your current implementation and explain how it could be improved using additional OOP concepts or better error handling.
 
 
-Since it is just a simple code, the limitation on this one is the lack of exception handling, if the user inputs a string for the quantity, the program will show an error
+Since it is just a simple code, the limitation on this one is the lack of exception handling, if the user inputs a string for the quantity, the program will show an error. To improved my design, perhaps adding another oop concepts such as Order class to separate order logic from the user interavction.
+
