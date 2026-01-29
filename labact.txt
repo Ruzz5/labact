@@ -1,0 +1,60 @@
+from abc import ABC, abstractmethod
+
+class Item(ABC):
+    
+    def __init__(self, title):
+        self.__title = title
+        
+    def item_info(self):
+        print("Product Name:", self.__title)
+        
+    def product(self, quantity):
+        pass
+class bookQ(Item):
+    def product(self, quantity):
+        print(f"Quantity:, (quantity:.2f)")
+        
+class bookT(Item):
+   def __init__(self, title, booktype):
+    super().__init__(title)
+    self.booktype = booktype
+        
+        
+def process(Item, quantity):
+    Item.item_info()
+    Item.product(quantity)
+
+    try:
+        return float(process) > 0
+    except:
+        return False
+    
+def main():
+    item = input("Enter book name:")
+    quantity = int(input("Enter quantity:"))
+    
+    
+    print("""\nChoose genre
+          1. Yaoi
+          2. Self-help""")
+    option = input("Enter choice: ")
+    
+    if option == "1":   
+        item = type(title)
+        
+    elif option == "2":
+        booktype = input("Enter card number: ")
+        payment = booktype(title, booktype)
+    
+    else:
+        print("Invalid")
+        return
+    print("order details")
+    process(item, quantity)
+    
+
+if __name__ == "__main__":
+    main()
+        
+        
+    
