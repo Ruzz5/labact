@@ -1,0 +1,69 @@
+from abc import ABC, abstractmethod
+
+class Item(ABC):
+
+    def __init__(self, title):
+        self._title = title
+
+    def item_info(self):
+        print("Book Title:", self._title)
+
+    @abstractmethod
+    def product(self, quantity):
+        pass
+
+class BookQ(Item):
+    def product(self, quantity):
+        print(f"Genre: Yaoi")
+        print(f"Quantity: {quantity}")
+
+
+
+class BookT(Item):
+    def __init__(self, title, booktype):
+        super().__init__(title)
+        self.booktype = booktype
+
+    def product(self, quantity):
+        print(f"Genre: Self-help")
+        print(f"Type: {self.booktype}")
+        print(f"Quantity: {quantity}")
+
+
+def process(item, quantity):
+    if quantity <= 0:
+        print("Invalid quantity.")
+        return
+
+    item.item_info()
+    item.product(quantity)
+
+
+def main():
+    title = input("Enter book title: ")
+    quantity = int(input("Enter quantity: "))
+
+    print("""
+Choose genre:
+1. Yaoi
+2. Self-help
+""")
+    option = input("Enter choice: ")
+
+    if option == "1":
+        item = BookQ(title)
+
+    elif option == "2":
+        booktype = input("Enter self-help type: ")
+        item = BookT(title, booktype)
+
+    else:
+        print("Invalid choice.")
+        return
+
+    print("\nOrder Details:")
+    process(item, quantity)
+
+
+if __name__ == "__main__":
+    main()
